@@ -1,0 +1,38 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+
+.formcontent{
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    padding: 60px 70px 20px 70px;
+    box-shadow: 5px 5px 5px white;
+}
+
+input{
+    border: 1px solid rgba(128, 128, 128, 0.253);
+    outline: none;
+
+}
+
+.signbtn button{
+    border: none;
+    outline: none;
+    background-color: orangered;
+    padding: 10px 30px;
+    margin: 10px 0px;
+    color: white;
+    font-weight: 600;
+}
+.topcontent{
+    color: orangered;
+}
+
+.account a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: blue;
+}

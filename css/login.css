@@ -1,0 +1,46 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 auto;
+}
+
+.login{
+    height: 80vh;
+}
+
+input{
+   border: 1px solid rgba(128, 128, 128, 0.199);
+   outline: none;
+}
+
+.loginbutton button{
+    background-color: orangered;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 600;
+   
+}
+
+.topcontent h5{
+    color: orangered;
+    font-size: 25px;
+}
+
+.formcontent{
+    border: 1px solid rgba(128, 128, 128, 0.274);
+    padding: 40px 30px;
+
+}
+
+.login-input2{
+    position: relative;
+}
+
+.passicon{
+    position: absolute;
+    top: 20px;
+    right: 13px;
+    font-size: 20px;
+}

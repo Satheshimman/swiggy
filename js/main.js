@@ -172,6 +172,7 @@ function showcard(a) {
          return(
             card.innerHTML+=`
             <div class="col-sm-12 col-md-6 col-lg-3">
+
                     <div class="my-3 procard">
                         
                             <div class="img">
@@ -199,7 +200,7 @@ function showcard(a) {
                             </div>
 
                             <div class="viewcard text-center">
-                                    <button type="submit" onClick="order(${a.id})">order</button>
+                                    <button type="submit" onClick="order(${a.id})">addtocart</button>
                             </div>
                         
                     </div>
@@ -282,7 +283,6 @@ function seecart(){
     ordercard.innerHTML=""
     cartsec.classList.toggle("cartspace");
     cartsec.classList.toggle("cartspace2");
-    header.classList.toggle("headspace");
     gocart()
 }
 
@@ -357,6 +357,7 @@ function increament(i){
         return a.id===i ? {...a,quantity:a.quantity+1}:a
     })
   gocart()
+
 }
 
 function decreament(x,y){
@@ -376,3 +377,5 @@ function decreament(x,y){
    }
  gocart()
  }
+
+
