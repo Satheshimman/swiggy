@@ -167,6 +167,13 @@ var header=document.getElementById("header")
 	//      navli.classList.toggle("d-none");
     //  })
 
+
+     function sathesh(){
+         navli.classList.toggle("d-none");
+        
+     }
+     
+
 function showcard(a) {
        a.map((a,b)=>{
          return(
