@@ -14,9 +14,23 @@ check()
 function check(){
     var lusername=document.getElementById("lusername").value
     var lpassword=document.getElementById("lpassword").value
+    var count=0
     checkdetails.filter((a,b)=>{
-        return a.name===lusername && a.pass===lpassword ? location.href="home-index.html":alert("wrongpass")
+        if(a.name===lusername&&a.pass===lpassword){
+            count++
+        }
+        else{
+
+        }
     })
+    
+    if(count>0){
+        location.href="home-index.html"
+    }
+    else{
+        alert("enter your details correctly")
+        console.log(count)
+    }
     console.log(lusername,lpassword)
 
 }

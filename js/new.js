@@ -16,6 +16,8 @@ signin.addEventListener("submit",function(e){
 	test(userpass1,3,"enter your password");
 	test(userpass2,4,"re enter password");
 
+
+	next()
 })
 
 
@@ -44,7 +46,7 @@ let test=function(id,i,message){
 	err[i].style.color="green"
 	err[i].style.fontSize="12px"
 	
-     next()
+	
 	}
 	
 	
@@ -58,14 +60,6 @@ function next(){
 	
 	if(username.value && usermail.value && userpass1.value && usernum.value){
 		
-		
-		
-		// localStorage.setItem("fsname",JSON.stringify(fname.value));
-		// localStorage.setItem("lsname",JSON.stringify(lname.value));
-		// localStorage.setItem("psword",JSON.stringify(pass.value));
-		// localStorage.setItem("email",JSON.stringify(mail.value));
-		
-
         let obj={
             name:username.value,
             mail:usermail.value,
@@ -73,12 +67,19 @@ function next(){
             pass:userpass1.value
         }
 
-       
-      
- 		// Setarray([...array,obj])
-        localStorage.setItem("userdetails",JSON.stringify([obj]))
+       var get=JSON.parse(localStorage.getItem("userdetails"))
 		
-		location.href="login-index.html"
+	   if(get===null || get===undefined){
+	   		localStorage.setItem("userdetails",JSON.stringify([obj]))
+		    location.href="login-index.html"
+	   }
+	   else{
+			get[get.length]=obj
+			localStorage.setItem("userdetails",JSON.stringify(get))
+			location.href="login-index.html"
+	   }
+		
+		
 
 		
 	}
